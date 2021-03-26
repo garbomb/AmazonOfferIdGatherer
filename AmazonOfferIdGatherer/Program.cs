@@ -24,7 +24,8 @@ namespace AmazonOfferIdGatherer
                     await GatherOfferId();
                 }
             }
-
+            Console.WriteLine("Offer Id:");
+            Console.WriteLine(_offerIdDetails.OfferId);
             Console.WriteLine("The offer Id has been found and captured in discord.  Press any key to exit.");
             Console.ReadKey();
         }
