@@ -1,4 +1,4 @@
-﻿namespace AmazonOfferIdGatherer
+﻿namespace AmazonOfferIdGatherer.Models
 {
     public sealed class OfferIdDetails
     {

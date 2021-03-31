@@ -1,16 +1,23 @@
-﻿using Discord;
+﻿using AmazonOfferIdGatherer.Interfaces;
+using Discord;
 using Discord.Webhook;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace AmazonOfferIdGatherer
+namespace AmazonOfferIdGatherer.Services
 {
-    public sealed class WebhookService
+    public sealed class WebhookService : IWebhookService
     {
+        private readonly ILogger<WebhookService> _log;
+        private readonly IConfiguration _configuration;
         private string _webhookUrl;
 
-        public WebhookService(string webhookUrl)
+        public WebhookService(ILogger<WebhookService> log, IConfiguration configuration, string webhookUrl)
         {
+            _log = log;
+            _configuration = configuration;
             if (String.IsNullOrEmpty(webhookUrl))
             {
                 throw new ArgumentNullException();
