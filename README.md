@@ -12,4 +12,8 @@ The offer Id's will only be grabbed for products that are "sold by amazon", no 3
 The console application will be written to the actaul console application window on your screen, it will also be sent in a webhook
 to a discord lobby I have.  Feel free to post in HOC and I will be updating the master gpu list as well.
 
+You may need to download the .net runtime .NET 5.0 and reboot if you don't already have the runtime installed.
+
+If you don't see an exe file you probably downloaded the wrong zip file from releases.
+
 Bock Bock mf's
